@@ -1,0 +1,51 @@
+.select-block label,
+.input-block label,
+.textarea-block label{
+    font-size: 1.4rem;
+    color: var(--color-text-complement);
+
+}
+
+.input-block input,
+.select-block select,
+.textarea-block textarea{
+    width: 100%;
+    height: 5.6rem;
+    margin-top: 0.8rem;
+    border-radius: 1rem;
+    background: var(--color-input-background);
+    border: 1px solid var(--color-line-in-white);
+    outline: 0;
+    padding: 0 1.6rem;
+    font: 1.6rem Archivo;
+}
+
+.textarea-block textarea{
+    padding: 1.2rem 1.6rem;
+    height: 16rem;
+
+    resize: vertical; /*resize configura o jeito que você quer deixar com que o usuário possa mudar a caixa de texto*/
+
+}
+
+.input-block{
+    position: relative;
+}
+
+.input-block:focus-within::after,
+.textarea-block:focus-within::after{   /*isso vai dar um highlight no campo quando a gente o estiver usando, after indica quando se estiver usando*/
+    content: "";
+
+    width: calc(100% - 3.2rem); /*calcula o tamanho da linha com relação ao input-block*/
+    height: 2px;
+    background: rgb(50, 205, 50);
+    position: absolute; /*para usarmos o absolute precisamos que ele seja absoluto com relação ao input-block, caso contrário ele vai para o body(o fizemos acima)*/
+    left: 1.6rem;   /*é necessário fazer esse posicionamento para que a barra fique exatamente embaixo da onde queremos*/
+    bottom: 0px;
+}
+
+label small{
+    font-size: 1.2rem;
+    padding-left: 1.2rem;
+    color: var(--color-small-info);
+}

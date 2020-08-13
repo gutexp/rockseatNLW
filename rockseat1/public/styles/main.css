@@ -1,0 +1,111 @@
+/* h1{         como você pode observar podemos mudar a cor dos estilos como o h1 */
+    /* color:greenyellow; */
+/* } */
+
+/* .red{     estamos dentro do css, aqui podemos modificar classes de coisas html como é o caso abaixo do h1 ou .red */
+    /* color: red; */
+/* } */
+
+/* #page-landing{      por conta do id no body, tudo que não tiver cor definida irá receber a cor nova */
+    /* color: seagreen; */
+/* } */
+
+:root{
+    --color-background: #F0F0F7;    /*variáveis CSS que já ficam com as cores, basta chamá-las quando necessitarmos de cores em algo do nosso código*/
+    --color-primary-lighter: #9871f5;
+    --color-primary-light: #916BEA;
+    --color-primary: #8257E5;
+    --color-primary-dark: #774DD6;
+    --color-primary-darker: #6842C2;
+    --color-secondary: #04D361;
+    --color-secondary-dark: #04BF58;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+    --color-text-tittle: #32264D;
+    --color-text-complement: #9C98A6;
+    --color-text-base: #6A6180;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #FFFFFF;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+    --color-small-info: #C1BCCC;
+    
+    /* tamanho da fonte */
+    /* tamanho da fonte padrão: 16px = 100% = 1rem  rem e % são relativos*/
+    font-size: 60%; /*controle das medidas rem*/
+    
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+}
+
+body{
+    background-color: var(--color-background);
+    /* No caso abaixo demonstramos como o 100% acaba sendo relativo ele se manterá como 100% de 60% */
+    font-size: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body, input, button, textarea{
+    font: 500 1.6rem Poppins; /*em ordem: weight(bold), familia da fonte e tamanho da fonte*/
+    color: var(--color-text-base);
+}
+
+#container{
+    width: 90vw;
+    max-width: 700px;
+    
+}
+
+@media(min-width: 700px){
+    :root{
+        font-size: 62.5%;   /*todo 1rem vai ser relativo a 10px*/
+    }
+}
+@media(max-width: 699px){
+    :root{
+        font-size: 40%; /*modificar as medidas rem*/
+    }
+    
+}
+
+
+
+
+
+
+
+/* como padding e margin funcionam */
+/*Aplica-se à todas as bordas*/
+/* padding: 1em; */
+
+/* vertical | horizontal */
+/* padding: 5% 10%; */
+
+/* superior | horizontal | inferior */
+/* padding: 1em 2em 2em;  */
+
+/* superior | direita | inferior | esquerda */
+/* padding: 2px 1em 0 1em; */
+
+/* box model  */
+/* #container {
+    
+    border: 1px solid red;
+    padding: 40px;
+    margin: 60px;
+
+    width: 300px;
+    height: 300px;
+} */
